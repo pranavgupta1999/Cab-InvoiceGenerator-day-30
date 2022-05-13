@@ -13,4 +13,12 @@ public class Invoice {
         }
         return totalFare;
     }
+    public double totalFare(Ride[] rides) {
+        double totalFare = 0;
+        for(Ride ride : rides) {
+            totalFare += this.fare(ride.kilometers, ride.minutes);
+        }
+        return totalFare;
+    }
+}
 }
